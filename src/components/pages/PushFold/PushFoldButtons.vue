@@ -7,6 +7,63 @@ export default{
     data(){
         return{
             message: 'Hello Vue!',
+            bg: {
+                EP_4_5: '',
+                MP_4_5: '',
+                HJ_4_5: '',
+                CO_4_5: '',
+                BTN_4_5: '',
+                SB_4_5: '',
+                
+                EP_6_7: '',
+                MP_6_7: '',
+                HJ_6_7: '',
+                CO_6_7: '',
+                BTN_6_7: '',
+                SB_6_7: '',
+                
+                EP_8_9: '',
+                MP_8_9: '',
+                HJ_8_9: '',
+                CO_8_9: '',
+                BTN_8_9: '',
+                SB_8_9: '',
+                
+                EP_10_11: '',
+                MP_10_11: '',
+                HJ_10_11: '',
+                CO_10_11: '',
+                BTN_10_11: '',
+                SB_10_11: '',
+                
+                EP_12_13: '',
+                MP_12_13: '',
+                HJ_12_13: '',
+                CO_12_13: '',
+                BTN_12_13: '',
+                SB_12_13: '',
+                
+                EP_14_15: '',
+                MP_14_15: '',
+                HJ_14_15: '',
+                CO_14_15: '',
+                BTN_14_15: '',
+                SB_14_15: '',
+                
+                EP_16_35: '',
+                MP_16_35: '',
+                HJ_16_35: '',
+                CO_16_35: '',
+                BTN_16_35: '',
+                SB_16_35: '',
+                
+                EP_36: '',
+                MP_36: '',
+                HJ_36: '',
+                CO_36: '',
+                BTN_36: '',
+                SB_36: '',
+            },
             EP_4_5: {
                 AA_o:'#f799ac', AK_s: '#f799ac', AQ_s: '#f799ac', AJ_s: '#f799ac', AT_s: '#f799ac', A9_s: '#f799ac', A8_s: '#f799ac', A7_s: '#f799ac', A6_s: '#f799ac', A5_s: '#f799ac', A4_s: '#f799ac', A3_s: '#f799ac', A2_s: '#f799ac',
                     KA_o: '#f799ac', KK_o: '#f799ac', KQ_s: '#f799ac', KJ_s: '#f799ac', KT_s: '#f799ac', K9_s: '#f799ac', K8_s: '#f799ac', K7_s: '#f799ac', K6_s: '#f799ac',
@@ -689,6 +746,13 @@ export default{
     },
     methods:{
         ...mapActions(usePockerStore, ['changeCurrentTable']),
+        changeBG(key){
+            for (let key in this.bg) {
+                this.bg[key] = ''; // просто заменяем значение
+            }
+
+            this.bg[key] = 'rgba(252, 29, 13, 0.7)'
+        }
     },
     computed:{
         ...mapState(usePockerStore, ['currentTable'])
@@ -700,76 +764,76 @@ export default{
 <template>
     <div class="gPFB">
         <div class="PushFoldButtons">
-            <button class="btn_4_5" @click="changeCurrentTable(EP_4_5)">4-5</button>
-            <button class="btn_4_5" @click="changeCurrentTable(MP_4_5)">4-5</button>
-            <button class="btn_4_5" @click="changeCurrentTable(HJ_4_5)">4-5</button>
-            <button class="btn_4_5" @click="changeCurrentTable(CO_4_5)">4-5</button>
-            <button class="btn_4_5" @click="changeCurrentTable(BTN_4_5)">4-5</button>
-            <button class="btn_4_5" @click="changeCurrentTable(SB_4_5)">4-5</button>
+            <button class="btn_4_5" @click="changeCurrentTable(EP_4_5); changeBG('EP_4_5')" :style="{background: bg['EP_4_5']}">4-5</button>
+            <button class="btn_4_5" @click="changeCurrentTable(MP_4_5); changeBG('MP_4_5')" :style="{background: bg['MP_4_5']}">4-5</button>
+            <button class="btn_4_5" @click="changeCurrentTable(HJ_4_5); changeBG('HJ_4_5')" :style="{background: bg['HJ_4_5']}">4-5</button>
+            <button class="btn_4_5" @click="changeCurrentTable(CO_4_5); changeBG('CO_4_5')" :style="{background: bg['CO_4_5']}">4-5</button>
+            <button class="btn_4_5" @click="changeCurrentTable(BTN_4_5); changeBG('BTN_4_5')" :style="{background: bg['BTN_4_5']}">4-5</button>
+            <button class="btn_4_5" @click="changeCurrentTable(SB_4_5); changeBG('SB_4_5')" :style="{background: bg['SB_4_5']}">4-5</button>
         </div>
         <div class="PushFoldButtons">
-            <button class="btn_6_7" @click="changeCurrentTable(EP_6_7)">6-7</button>
-            <button class="btn_6_7" @click="changeCurrentTable(MP_6_7)">6-7</button>
-            <button class="btn_6_7" @click="changeCurrentTable(HJ_6_7)">6-7</button>
-            <button class="btn_6_7" @click="changeCurrentTable(CO_6_7)">6-7</button>
-            <button class="btn_6_7" @click="changeCurrentTable(BTN_6_7)">6-7</button>
-            <button class="btn_6_7" @click="changeCurrentTable(SB_6_7)">6-7</button>
+            <button class="btn_6_7" @click="changeCurrentTable(EP_6_7); changeBG('EP_6_7')" :style="{background: bg['EP_6_7']}">6-7</button>
+            <button class="btn_6_7" @click="changeCurrentTable(MP_6_7); changeBG('MP_6_7')" :style="{background: bg['MP_6_7']}">6-7</button>
+            <button class="btn_6_7" @click="changeCurrentTable(HJ_6_7); changeBG('HJ_6_7')" :style="{background: bg['HJ_6_7']}">6-7</button>
+            <button class="btn_6_7" @click="changeCurrentTable(CO_6_7); changeBG('CO_6_7')" :style="{background: bg['CO_6_7']}">6-7</button>
+            <button class="btn_6_7" @click="changeCurrentTable(BTN_6_7); changeBG('BTN_6_7')" :style="{background: bg['BTN_6_7']}">6-7</button>
+            <button class="btn_6_7" @click="changeCurrentTable(SB_6_7); changeBG('SB_6_7')" :style="{background: bg['SB_6_7']}">6-7</button>
         </div>
         <div class="PushFoldButtons">
-            <button class="btn_8_9" @click="changeCurrentTable(EP_8_9)">8-9</button>
-            <button class="btn_8_9" @click="changeCurrentTable(MP_8_9)">8-9</button>
-            <button class="btn_8_9" @click="changeCurrentTable(HK_8_9)">8-9</button>
-            <button class="btn_8_9" @click="changeCurrentTable(CO_8_9)">8-9</button>
-            <button class="btn_8_9" @click="changeCurrentTable(BTN_8_9)">8-9</button>
-            <button class="btn_8_9" @click="changeCurrentTable(SB_8_9)">8-9</button>
+            <button class="btn_8_9" @click="changeCurrentTable(EP_8_9); changeBG('EP_8_9')" :style="{background: bg['EP_8_9']}">8-9</button>
+            <button class="btn_8_9" @click="changeCurrentTable(MP_8_9); changeBG('MP_8_9')" :style="{background: bg['MP_8_9']}">8-9</button>
+            <button class="btn_8_9" @click="changeCurrentTable(HK_8_9); changeBG('HK_8_9')" :style="{background: bg['HK_8_9']}">8-9</button>
+            <button class="btn_8_9" @click="changeCurrentTable(CO_8_9); changeBG('CO_8_9')" :style="{background: bg['CO_8_9']}">8-9</button>
+            <button class="btn_8_9" @click="changeCurrentTable(BTN_8_9); changeBG('BTN_8_9')" :style="{background: bg['BTN_8_9']}">8-9</button>
+            <button class="btn_8_9" @click="changeCurrentTable(SB_8_9); changeBG('SB_8_9')" :style="{background: bg['SB_8_9']}">8-9</button>
         </div>
         <div class="PushFoldButtons">
-            <button class="btn_10_11" @click="changeCurrentTable(EP_10_11)">10-11</button>
-            <button class="btn_10_11" @click="changeCurrentTable(MP_10_11)">10-11</button>
-            <button class="btn_10_11" @click="changeCurrentTable(HJ_10_11)">10-11</button>
-            <button class="btn_10_11" @click="changeCurrentTable(CO_10_11)">10-11</button>
-            <button class="btn_10_11" @click="changeCurrentTable(BTN_10_11)">10-11</button>
-            <button class="btn_10_11" @click="changeCurrentTable(SB_10_11)">10-11</button>
+            <button class="btn_10_11" @click="changeCurrentTable(EP_10_11); changeBG('EP_10_11')" :style="{background: bg['EP_10_11']}">10-11</button>
+            <button class="btn_10_11" @click="changeCurrentTable(MP_10_11); changeBG('MP_10_11')" :style="{background: bg['MP_10_11']}">10-11</button>
+            <button class="btn_10_11" @click="changeCurrentTable(HJ_10_11); changeBG('HJ_10_11')" :style="{background: bg['HJ_10_11']}">10-11</button>
+            <button class="btn_10_11" @click="changeCurrentTable(CO_10_11); changeBG('CO_10_11')" :style="{background: bg['CO_10_11']}">10-11</button>
+            <button class="btn_10_11" @click="changeCurrentTable(BTN_10_11); changeBG('BTN_10_11')" :style="{background: bg['BTN_10_11']}">10-11</button>
+            <button class="btn_10_11" @click="changeCurrentTable(SB_10_11); changeBG('SB_10_11')" :style="{background: bg['SB_10_11']}">10-11</button>
         </div>
         <div class="PushFoldButtons">
-            <button class="btn_12_13" @click="changeCurrentTable(EP_12_13)">12-13</button>
-            <button class="btn_12_13" @click="changeCurrentTable(MP_12_13)">12-13</button>
-            <button class="btn_12_13" @click="changeCurrentTable(HJ_12_13)">12-13</button>
-            <button class="btn_12_13" @click="changeCurrentTable(CO_12_13)">12-13</button>
-            <button class="btn_12_13" @click="changeCurrentTable(BTN_12_13)">12-13</button>
-            <button class="btn_12_13" @click="changeCurrentTable(SB_12_13)">12-13</button>
+            <button class="btn_12_13" @click="changeCurrentTable(EP_12_13); changeBG('EP_12_13')" :style="{background: bg['EP_12_13']}">12-13</button>
+            <button class="btn_12_13" @click="changeCurrentTable(MP_12_13); changeBG('MP_12_13')" :style="{background: bg['MP_12_13']}">12-13</button>
+            <button class="btn_12_13" @click="changeCurrentTable(HJ_12_13); changeBG('HJ_12_13')" :style="{background: bg['HJ_12_13']}">12-13</button>
+            <button class="btn_12_13" @click="changeCurrentTable(CO_12_13); changeBG('CO_12_13')" :style="{background: bg['CO_12_13']}">12-13</button>
+            <button class="btn_12_13" @click="changeCurrentTable(BTN_12_13); changeBG('BTN_12_13')" :style="{background: bg['BTN_12_13']}">12-13</button>
+            <button class="btn_12_13" @click="changeCurrentTable(SB_12_13); changeBG('SB_12_13')" :style="{background: bg['SB_12_13']}">12-13</button>
         </div>
         <div class="PushFoldButtons">
-            <button class="btn_14_15" @click="changeCurrentTable(EP_14_15)">14-15</button>
-            <button class="btn_14_15" @click="changeCurrentTable(MP_14_15)">14-15</button>
-            <button class="btn_14_15" @click="changeCurrentTable(HJ_14_15)">14-15</button>
-            <button class="btn_14_15" @click="changeCurrentTable(CO_14_15)">14-15</button>
-            <button class="btn_14_15" @click="changeCurrentTable(BTN_14_15)">14-15</button>
-            <button class="btn_14_15" @click="changeCurrentTable(SB_14_15)">14-15</button>
-        </div>
-        <div class="DescriptionButtons">
-            <p>EP</p>
-            <p>MP</p>
-            <p>HJ</p>
-            <p>CO</p>
-            <p>BTN</p>
-            <p>SB</p>
+            <button class="btn_14_15" @click="changeCurrentTable(EP_14_15); changeBG('EP_14_15')" :style="{background: bg['EP_14_15']}">14-15</button>
+            <button class="btn_14_15" @click="changeCurrentTable(MP_14_15); changeBG('MP_14_15')" :style="{background: bg['MP_14_15']}">14-15</button>
+            <button class="btn_14_15" @click="changeCurrentTable(HJ_14_15); changeBG('HJ_14_15')" :style="{background: bg['HJ_14_15']}">14-15</button>
+            <button class="btn_14_15" @click="changeCurrentTable(CO_14_15); changeBG('CO_14_15')" :style="{background: bg['CO_14_15']}">14-15</button>
+            <button class="btn_14_15" @click="changeCurrentTable(BTN_14_15); changeBG('BTN_14_15')" :style="{background: bg['BTN_14_15']}">14-15</button>
+            <button class="btn_14_15" @click="changeCurrentTable(SB_14_15); changeBG('SB_14_15')" :style="{background: bg['SB_14_15']}">14-15</button>
         </div>
         <div class="PushFoldButtons">
-            <button class="btn_16_35" @click="changeCurrentTable(EP_16_35)">16-35</button>
-            <button class="btn_16_35" @click="changeCurrentTable(MP_16_35)">16-35</button>
-            <button class="btn_16_35" @click="changeCurrentTable(HJ_16_35)">16-35</button>
-            <button class="btn_16_35" @click="changeCurrentTable(CO_16_35)">16-35</button>
-            <button class="btn_16_35" @click="changeCurrentTable(BTN_16_35)">16-35</button>
-            <button class="btn_16_35" @click="changeCurrentTable(SB_16_35)">16-35</button>
+            <p class="DescriptionButtons">EP</p>
+            <p class="DescriptionButtons">MP</p>
+            <p class="DescriptionButtons">HJ</p>
+            <p class="DescriptionButtons">CO</p>
+            <p class="DescriptionButtons">BTN</p>
+            <p class="DescriptionButtons">SB</p>
         </div>
         <div class="PushFoldButtons">
-            <button class="btn_36" @click="changeCurrentTable(EP_36)">36+</button>
-            <button class="btn_36" @click="changeCurrentTable(MP_36)">36+</button>
-            <button class="btn_36" @click="changeCurrentTable(HJ_36)">36+</button>
-            <button class="btn_36" @click="changeCurrentTable(CO_36)">36+</button>
-            <button class="btn_36" @click="changeCurrentTable(BTN_36)">36+</button>
-            <button class="btn_36" @click="changeCurrentTable(SB_36)">36+</button>
+            <button class="btn_16_35" @click="changeCurrentTable(EP_16_35); changeBG('EP_16_35')" :style="{background: bg['EP_16_35']}">16-35</button>
+            <button class="btn_16_35" @click="changeCurrentTable(MP_16_35); changeBG('MP_16_35')" :style="{background: bg['MP_16_35']}">16-35</button>
+            <button class="btn_16_35" @click="changeCurrentTable(HJ_16_35); changeBG('HJ_16_35')" :style="{background: bg['HJ_16_35']}">16-35</button>
+            <button class="btn_16_35" @click="changeCurrentTable(CO_16_35); changeBG('CO_16_35')" :style="{background: bg['CO_16_35']}">16-35</button>
+            <button class="btn_16_35" @click="changeCurrentTable(BTN_16_35); changeBG('BTN_16_35')" :style="{background: bg['BTN_16_35']}">16-35</button>
+            <button class="btn_16_35" @click="changeCurrentTable(SB_16_35); changeBG('SB_16_35')" :style="{background: bg['SB_16_35']}">16-35</button>
+        </div>
+        <div class="PushFoldButtons">
+            <button class="btn_36" @click="changeCurrentTable(EP_36); changeBG('EP_36')" :style="{background: bg['EP_36']}">36+</button>
+            <button class="btn_36" @click="changeCurrentTable(MP_36); changeBG('MP_36')" :style="{background: bg['MP_36']}">36+</button>
+            <button class="btn_36" @click="changeCurrentTable(HJ_36); changeBG('HJ_36')" :style="{background: bg['HJ_36']}">36+</button>
+            <button class="btn_36" @click="changeCurrentTable(CO_36); changeBG('CO_36')" :style="{background: bg['CO_36']}">36+</button>
+            <button class="btn_36" @click="changeCurrentTable(BTN_36); changeBG('BTN_36')" :style="{background: bg['BTN_36']}">36+</button>
+            <button class="btn_36" @click="changeCurrentTable(SB_36); changeBG('SB_36')" :style="{background: bg['SB_36']}">36+</button>
         </div>
     </div>
     
@@ -785,11 +849,23 @@ export default{
         flex-direction: column;
     }
     .DescriptionButtons{
-        font-size: 10px;
+        -webkit-border-radius: 7;
+        -moz-border-radius: 7;
+        border-radius: 7px;
+        font-family: 'Franklin Gothic Medium';
+        color: #ffffff;
+        text-shadow:
+        -1px -1px 0 #363636,
+        1px -1px 0 #363636,
+        -1px  1px 0 #363636,
+        1px  1px 0 #363636;
+        font-size: 11px;
+        font-weight: 700;
+        background: transparent;
+        padding: 1px 1px 1px 1px;
+        text-decoration: none;
         margin-left: 5px;
-        display: flex;
-        flex-direction: column;
-        font-weight: 900;
+        width: 40px;
     }
     .btn_4_5 {
         -webkit-border-radius: 7;
@@ -798,8 +874,9 @@ export default{
         font-family: Arial;
         color: #f799ac;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #f799ac 1px;
         text-decoration: none;
         margin-left: 5px;
@@ -824,8 +901,9 @@ export default{
         font-family: Arial;
         color: #f4c2ac;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #f4c2ac 1px;
         text-decoration: none;
         margin-left: 5px;
@@ -850,8 +928,9 @@ export default{
         font-family: Arial;
         color: #ead26b;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #ead26b 1px;
         text-decoration: none;
         margin-left: 5px;
@@ -876,12 +955,13 @@ export default{
         font-family: Arial;
         color: #51cbb0;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #51cbb0 1px;
         text-decoration: none;
         margin-left: 5px;
-        width: 50px;
+        width: 60px;
     }
 
     .btn_10_11:hover {
@@ -902,12 +982,13 @@ export default{
         font-family: Arial;
         color: #99abf8;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #99abf8 1px;
         text-decoration: none;
         margin-left: 5px;
-        width: 50px;
+        width: 60px;
     }
 
     .btn_12_13:hover {
@@ -928,12 +1009,13 @@ export default{
         font-family: Arial;
         color: #54c0e5;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #54c0e5 1px;
         text-decoration: none;
         margin-left: 5px;
-        width: 50px;
+        width: 60px;
     }
 
     .btn_14_15:hover {
@@ -954,12 +1036,13 @@ export default{
         font-family: Arial;
         color: #f4c2ac;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #f4c2ac 1px;
         text-decoration: none;
         margin-left: 5px;
-        width: 50px;
+        width: 60px;
     }
 
     .btn_16_35:hover{
@@ -980,12 +1063,13 @@ export default{
         font-family: Arial;
         color: #88d0e9;
         font-size: 11px;
+        font-weight: 700;
         background: transparent;
-        padding: 8px 8px 8px 8px;
+        padding: 11px 11px 11px 11px;
         border: solid #88d0e9 1px;
         text-decoration: none;
         margin-left: 5px;
-        width: 50px;
+        width: 60px;
     }
 
     .btn_36:hover{

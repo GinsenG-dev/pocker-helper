@@ -4,8 +4,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
       <nav>
-        <RouterLink class="rButtons" to="/">Home</RouterLink>
-        <RouterLink to="/PushFold">PushFold</RouterLink>
+        <RouterLink class="rButtons" to="/">PushFold</RouterLink>
+        <RouterLink to="/PushFold">...</RouterLink>
       </nav>
   <RouterView />
 </template>

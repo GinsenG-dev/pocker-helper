@@ -1,12 +1,14 @@
 <script>
   import PushFold from './pages/PushFold.vue'
   import MainTable from './pages/MainTable.vue'
-  MainTable
+  import LogoBottom from './pages/Logo/LogoBottom.vue';
+  
   export default {
   name: 'Home',
   components: {
     PushFold,
-    MainTable
+    MainTable,
+    LogoBottom
   }
 };
 </script>
@@ -20,6 +22,9 @@
       <MainTable />
     </div>
   </div>
+  <div className="lComponents">
+      <LogoBottom />
+  </div>
 </template>
 
 <style>
@@ -29,12 +34,16 @@
   justify-content: center;
   text-align: center;
 }
-
-
 .sComponents{
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-left: 50px;
+}
+.lComponents{
+  display: flex;
+  justify-content: left;
+  text-align: left;
   margin-left: 50px;
 }
 

@@ -10,6 +10,7 @@ import MainTableButtons from './MainTable/MainTableButtons.vue'
 };
 
 </script>
+
 <template>
   <div >
     <div>
